@@ -1,12 +1,17 @@
+
 var Footer = require('./Footer.react');
 var Header = require('./Header.react');
 var MainSection = require('./MainSection.react');
 var React = require('react');
 var TodoStore = require('../stores/TodoStore');
 
+/**
+ * Retrieve the current TODO data from the TodoStore
+ */
 function getTodoState() {
   return {
-    allTodos: TodoStore.getAll()
+    allTodos: TodoStore.getAll(),
+    areAllComplete: TodoStore.areAllComplete()
   };
 }
 
@@ -40,6 +45,9 @@ var TodoApp = React.createClass({
     );
   },
 
+  /**
+   * Event handler for 'change' events coming from the TodoStore
+   */
   _onChange: function() {
     this.setState(getTodoState());
   }

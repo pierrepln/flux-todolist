@@ -1,3 +1,4 @@
+
 var React = require('react');
 var ReactPropTypes = React.PropTypes;
 
@@ -58,9 +59,8 @@ var TodoTextInput = React.createClass({
   },
 
   /**
-   * @param {object} event
+   * @param  {object} event
    */
-
   _onKeyDown: function(event) {
     if (event.keyCode === ENTER_KEY_CODE) {
       this._save();
