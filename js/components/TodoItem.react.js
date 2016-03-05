@@ -10,7 +10,6 @@ var TodoItem = React.createClass({
 
   render: function() {
     var todo = this.props.todo;
-
     return (
       <li
         key={todo.id}>
