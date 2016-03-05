@@ -1,0 +1,1 @@
+console.error("Error: Cannot find module './Footer.react' from '/Users/pp/Lab/flux-todolist/js/components'");
